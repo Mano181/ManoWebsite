@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mano</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <!-- Header: photo + name + tagline + social icons -->
+    <div id="dhead" class="container">
+      <div class="row">
+        <div id="dpic">
+          <img src="assets/profile.jpg" />
+        </div>
+        <div id="ddesc">
+          <h1>Mano</h1>
+          <h2>Software engineer who loves building things 🚀💻</h2>
+          <div id="dico">
+            <a href="https://twitter.com/"><img src="assets/ctwitter.svg" class="iico" /></a>
+            <a href="https://github.com/"><img src="assets/cgithub.svg" class="iico" /></a>
+            <a href="https://linkedin.com/"><img src="assets/clinkedin.svg" class="iico" /></a>
+            <a href="https://youtube.com/"><img src="assets/cyoutube.svg" class="iico" /></a>
+            <img src="assets/cemail.svg" style="cursor: pointer;" class="iico" id="iemail" title="click to reveal" />
+          </div>
+          <div id="demail"></div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Timeline / History -->
+    <div id="history" class="container">
+
+      <div class="entry row">
+        <div class="timespan">2024 -</div>
+        <div class="ico">
+          <div class="entry-dot"></div>
+          <img src="assets/company1.png" />
+        </div>
+        <div class="desc">
+          Currently working on exciting projects. Update this section with your current role and accomplishments.
+        </div>
+      </div>
+
+      <div class="entry row">
+        <div class="timespan">2021 - 2024</div>
+        <div class="ico">
+          <div class="entry-dot"></div>
+          <img src="assets/company2.png" />
+        </div>
+        <div class="desc">
+          Previous role description. Update with your experience details, notable projects, and achievements.
+        </div>
+      </div>
+
+      <div class="entry row">
+        <div class="timespan">2017 - 2021</div>
+        <div class="ico">
+          <div class="entry-dot"></div>
+          <img src="assets/company3.png" />
+        </div>
+        <div class="desc">
+          Earlier role description. Add links to relevant projects, talks, or publications.
+        </div>
+      </div>
+
+      <div class="entry row">
+        <div class="timespan">2013 - 2017</div>
+        <div class="ico">
+          <div class="entry-dot"></div>
+          <img src="assets/university.png" />
+        </div>
+        <div class="desc">
+          Education details. Update with your degree, university, notable coursework, and any research.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bio -->
+    <div class="container">
+      <div class="ctitle">bio</div>
+      <div id="bio-section">Mano Srithar is a software engineer passionate about technology and building impactful products. Update this bio with your own background and accomplishments.</div><br><br>
+    </div>
+
+    <!-- Featured Writing -->
+    <div class="writing-bg">
+      <div class="container">
+        <div class="ctitle">featured writing</div>
+        <div>A collection of blog posts and articles:</div>
+        <ul class="nodot">
+          <li>Jan 2024 <a href="#">Blog Post Title One</a></li>
+          <li>Sep 2023 <a href="#">Blog Post Title Two</a></li>
+          <li>Mar 2023 <a href="#">Blog Post Title Three</a></li>
+          <li>Nov 2022 <a href="#">Blog Post Title Four</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pet Projects -->
+    <div id="pet-projects" class="container">
+      <div class="ctitle">pet projects</div>
+
+      <div class="project">
+        <div class="pico"><img src="assets/project1.jpg" /></div>
+        <div class="pdesc"><a href="#">Project One</a> — Brief description of the project, what it does, and the technologies used.</div>
+        <div class="pend"></div>
+      </div>
+
+      <div class="project">
+        <div class="pico"><img src="assets/project2.jpg" /></div>
+        <div class="pdesc"><a href="#">Project Two</a> — Brief description of another project with links to the repo or demo.</div>
+        <div class="pend"></div>
+      </div>
+
+      <div class="project">
+        <div class="pico"><img src="assets/project3.jpg" /></div>
+        <div class="pdesc"><a href="#">Project Three</a> — Description of a third project and its impact or purpose.</div>
+        <div class="pend"></div>
+      </div>
+    </div>
+
+    <!-- Email reveal script -->
+    <script>
+      var defined = false;
+      document.getElementById('iemail').addEventListener("click", function() {
+        if (!defined) {
+          // Replace with your actual email
+          document.getElementById('demail').innerHTML = '<a href="mailto:your.email@example.com">your.email@example.com</a>';
+          document.getElementById('demail').style.opacity = 1;
+          defined = true;
+        }
+      });
+    </script>
+
+  </body>
+</html>
