@@ -1,0 +1,257 @@
+:root {
+  --text: #222;
+  --muted: #888;
+  --bg: #fafaf8;
+  --bg-alt: #f3f2ee;
+  --border: #ddd;
+  --link: #8b2c2c;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+/* Layout */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Header */
+#dhead {
+  margin-top: 50px;
+}
+#dpic {
+  grid-column: span 6;
+  text-align: right;
+}
+#ddesc {
+  padding-top: 40px;
+  padding-left: 32px;
+  grid-column: span 6;
+}
+@media (max-width: 991px) {
+  #dpic {
+    grid-column: span 12;
+    text-align: center;
+  }
+  #ddesc {
+    grid-column: span 12;
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+
+#dpic img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  filter: grayscale(20%);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  padding: 0;
+  margin: 0 0 4px 0;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+h2 {
+  font-weight: normal;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 19px;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+@media (min-width: 992px) {
+  h2 { max-width: 340px; }
+}
+
+/* Social icons */
+#dico {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  #dico { justify-content: center; }
+}
+.iico {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+.iico:hover {
+  opacity: 1;
+}
+
+#demail {
+  margin-top: 10px;
+  color: var(--link);
+  opacity: 0;
+  transition: opacity 0.7s;
+  font-size: 15px;
+}
+
+/* Divider */
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 36px 0;
+}
+
+/* Timeline */
+.ico {
+  grid-column: span 1;
+  border-left: 1px solid var(--border);
+  position: relative;
+  padding-top: 4px;
+}
+.ico img {
+  border-radius: 4px;
+  width: 100%;
+  max-width: 80px;
+  margin-left: 10px;
+}
+.desc {
+  grid-column: span 10;
+  font-size: 17px;
+  padding-left: 24px;
+  padding-bottom: 32px;
+  color: #333;
+  line-height: 1.8;
+}
+.desc a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.desc a:hover {
+  color: #5a1a1a;
+}
+.entry-dot {
+  position: absolute;
+  top: 6px;
+  left: -5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--border);
+  border: 2px solid var(--bg);
+}
+.timespan {
+  grid-column: span 1;
+  font-size: 13px;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  text-align: right;
+  padding-right: 8px;
+  color: var(--muted);
+  padding-top: 4px;
+}
+
+/* Section titles */
+.ctitle {
+  font-size: 13px;
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+  margin-top: 48px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+/* Bio section */
+#bio-section {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.9;
+  max-width: 700px;
+}
+
+/* Featured writing */
+.writing-bg {
+  background-color: var(--bg-alt);
+  padding-top: 1px;
+  margin-top: 50px;
+  padding-bottom: 40px;
+}
+.nodot {
+  list-style-type: none;
+  padding-left: 0;
+}
+.nodot li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 16px;
+  color: var(--muted);
+}
+.nodot li a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-style: italic;
+}
+.nodot li a:hover {
+  color: #5a1a1a;
+}
+
+/* Pet projects */
+.project {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.pico {
+  float: left;
+  margin-right: 16px;
+}
+.pico img {
+  height: 80px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.pdesc {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+}
+.pdesc a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-style: italic;
+}
+.pdesc a:hover {
+  color: #5a1a1a;
+}
+.pend {
+  clear: both;
+}
